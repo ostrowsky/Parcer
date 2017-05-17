@@ -1,0 +1,406 @@
+<html lang='en'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2391b64adb","applicationID":"8943572","transactionName":"cwwNRUNWXw5QFk1VRlk8CFRIShwLWwAHTA==","queueTime":0,"applicationTime":30,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<title>Members</title>
+<link rel="stylesheet" media="screen" href="/assets/application-5cc45b8e26e50eaa6e74256189239b3a784bb373d2eb419c6b62f8cab963ca4d.css" />
+<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Oswald:400,700,300" />
+<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Roboto:400,700,500,400italic,500italic,700italic" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="qrsHCJIlCjvnRCBszL/CQYWfaB+AcuLag7K3oI+mE0b2x/jSXNoHitQ8J9sEoTl0a4Wng8VDzC9Dj1dOu9dxTg==" />
+</head>
+<body class='body-orange'>
+<div class='mini-navbar mini-navbar-dark hidden-xs'>
+<div class='container'>
+<div class='col-sm-10'>
+<a class="first-child" target="_blank" href="http://openweathermap.desk.com/customer/portal/emails/new?t=535697"><i class='fa fa-envelope'></i>
+<span class='hidden-sm'>Support Center</span>
+</a><a class="pull-right" href="/"><i class='fa fa-arrow-circle-down'></i>
+Hello
+ostrowsky
+</a><a class="pull-right animated flipInX" id="nav-search" href="#"><i class='fa fa-search' onclick="_gaq.push(['_trackEvent', 'Navbar', 'Main', 'search']);"></i>
+Weather in your city
+</a><a class="pull-right hidden" id="nav-search-close" href="#"><i class='fa fa-times'></i>
+</a><form class="pull-right hidden" id="nav-search-form" action="http://openweathermap.org/find" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<div class='input-group'>
+<input type="text" name="q" id="q" class="form-control" placeholder="Search" />
+<div class='input-group-btn'>
+<button class='btn btn-default' type='submit'>
+<i class='fa fa-search'></i>
+</button>
+</div>
+</div>
+</form>
+
+</div>
+<div class='col-sm-2'></div>
+</div>
+</div>
+<div class='sticky-wrapper' id='undefined-sticky-wrapper' style='height: 75px;'>
+<div class='navbar navbar-dark navbar-static-top' role='navigation'>
+<div class='container'>
+<div class='navbar-header'>
+<button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='sr-only'>Toggle navigation</span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<a class="navbar-brand" href="http://openweathermap.org"><img style="vertical-align:bottom; height:30px;" src="/assets/logo_OpenWeatherMap_orange_website-04422775ccee2bbe88f4f2d55678c28b17c2cfeca05619f9138cf376fe53043e.png" alt="Logo openweathermap orange website" />
+</a></div>
+<div class='navbar-collapse collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li>
+<a class="bg-hover-color" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Navbar&#39;, &#39;Main&#39;, &#39;weather&#39;]);" href="http://openweathermap.org/city">Weather</a>
+</li>
+<li class='dropdown'>
+<a class="dropdown-toggle bg-hover-color" data-toggle="dropdown" href="#">Maps
+<b class='caret'></b>
+</a><ul class='dropdown-menu'>
+<li><a class="bg-hover-color" href="http://openweathermap.org/maps">Weather maps</a></li>
+<li><a class="bg-hover-color" href="http://openweathermap.org/help/sat.html">Current sattelite maps</a></li>
+<li><a class="bg-hover-color" href="http://openweathermap.org/beautifulmaps">Beautiful maps</a></li>
+</ul>
+</li>
+<li>
+<a class="bg-hover-color" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Navbar&#39;, &#39;Main&#39;, &#39;api&#39;]);" href="http://openweathermap.org/api">API</a>
+</li>
+<li>
+<a class="bg-hover-color" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Navbar&#39;, &#39;Main&#39;, &#39;price&#39;]);" href="http://openweathermap.org/price">Price</a>
+</li>
+<li>
+<a class="bg-hover-color" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Navbar&#39;, &#39;Main&#39;, &#39;partners&#39;]);" href="http://openweathermap.org/examples">Partners</a>
+</li>
+<li>
+<a class="bg-hover-color" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Navbar&#39;, &#39;Main&#39;, &#39;station&#39;]);" href="http://openweathermap.org/stations">Stations</a>
+</li>
+<li>
+<a class="bg-hover-color" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Navbar&#39;, &#39;Main&#39;, &#39;news&#39;]);" href="http://openweathermap.org/news">News</a>
+</li>
+<li class='dropdown'>
+<a class="dropdown-toggle bg-hover-color" data-toggle="dropdown" href="#">About
+<b class='caret'></b>
+</a><ul class='dropdown-menu'>
+<li><a class="bg-hover-color" href="http://openweathermap.org/about">About company</a></li>
+<li><a class="bg-hover-color" href="http://openweathermap.org/owm-platform">OWM platform</a></li>
+<li><a class="bg-hover-color" href="http://openweathermap.org/technology">Big Data Technology</a></li>
+<li><a class="bg-hover-color" href="http://openweathermap.org/models">Meteorological models</a></li>
+<li><a class="bg-hover-color" href="http://openweathermap.org/datasource">Data sources</a></li>
+</ul>
+</li>
+</ul>
+<form class="navbar-form navbar-left visible-xs" role="search" action="http://openweathermap.org/find" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<div class='form-group'>
+<input type="text" name="q" id="q" class="form-control" placeholder="Search" />
+</div>
+<button class='btn btn-default' type='submit'>Go!</button>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class='wrapper'>
+<div class='topic'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-4'>
+<h3 class='primary-font'>API keys
+</h3>
+</div>
+<div class='col-sm-8'>
+<ol class='breadcrumb pull-right hidden-xs'>
+<li><a href="/">Home</a></li>
+
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id='alert_body'></div>
+<div id='flash'></div>
+<div class='container'>
+<div class='row'>
+<div class='col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2'>
+<div class='panel panel-green'>
+<div class='panel-heading'>
+<button class='close' data-dismiss='alert' data-target='.panel-green' type='button'>x</button>
+Notice
+</div>
+<div class='panel-body'>Signed in successfully.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='container'>
+<div class='clearfix'>
+<ul class='nav nav-tabs pull-left' id='myTab'>
+<li class=''>
+<a href="/">Setup</a>
+</li>
+<li class='active'>
+<a href="/api_keys">API keys</a>
+</li>
+<li class=''>
+<a href="/myservices">My Services</a>
+</li>
+<li class=''>
+<a href="/payments">My Payments</a>
+</li>
+<li class=''>
+<a href="/subscriptions">Billing plans</a>
+</li>
+<li class=''>
+<a href="/map_editor">Map editor</a>
+</li>
+<li class=''>
+<a href="/blocks">Block logs</a>
+</li>
+</ul>
+<div class='pull-right'>
+<a class="btn btn-orange" rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a>
+</div>
+</div>
+
+<div class='alert alert-info'>
+<strong>NEW!</strong>
+You can generate as many API keys as needed for your subscription. We accumulate the total load from all of them.
+</div>
+<br>
+<div class='row'>
+<div class='col-xs-8'>
+<table class='table api-keys'>
+<thead>
+<tr>
+<th>Key</th>
+<th>Name</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<pre>5ed63d7796f30a5f84cf735eed9af7e1</pre>
+</td>
+<td>Default</td>
+<td class='active text-center'>
+<a class='btn btn-default btn-xs edit-key-btn' data-action='/api_keys/585a74eaada1090008ff473d' data-name='Default'>
+<i class='fa fa-edit'></i>
+</a>
+<a class="btn btn-default btn-xs" data-confirm="Do you want to remove this key?" rel="nofollow" data-method="delete" href="/api_keys/585a74eaada1090008ff473d"><i class="fa fa-remove"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='col-xs-4'>
+<h4>Create key</h4>
+<hr>
+<form novalidate="novalidate" class="simple_form new_api_key_form" id="new_api_key_form" action="/api_keys" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="gt0/PInTlFI4cAClXVl8Aps4dV4mMrrB5yyU52muLfneocDmRyyZ4wsIBxKVR4c3dSK6wmMDlDQnEXQJXd9P8Q==" /><div class="form-group string required api_key_form_name"><label class="string required control-label" for="api_key_form_name"><abbr title="required">*</abbr> Name</label><input class="string required form-control" type="text" name="api_key_form[name]" id="api_key_form_name" /></div>
+<input type="submit" name="commit" value="Generate" class="btn btn-default btn-orange" />
+</form>
+</div>
+</div>
+<div class='modal fade' id='edit_key_modal'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button class='close' data-dismiss='modal'>
+<span>&times;</span>
+</button>
+<h4 class='modal-title'>
+Warning!
+</h4>
+</div>
+<div class='modal-body'>
+<form class="simple_form form-horizontal" novalidate="novalidate" id="new_edit_key_form" action="/api_keys" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="patch" /><input type="hidden" name="authenticity_token" value="MsZZUbgGullBNE60AsfEqEI5LnAH8A2DcGclIg9VKd9uuqaLdvm36HJMSQPK2T+drCPh7ELBI3awWsXMOyRL1w==" /><div class="form-group string required edit_key_form_name"><label class="string required col-sm-3 control-label" for="edit_key_form_name"><abbr title="required">*</abbr> Name</label><div class="col-sm-9"><input class="string required form-control" type="text" name="edit_key_form[name]" id="edit_key_form_name" /></div></div>
+</form>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-orange' onclick='$("#new_edit_key_form").submit()'>Edit</button>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+<footer class='footer-dark'>
+<div class='container'>
+<div class='row'>
+<!-- API -->
+<div class='col-sm-4'>
+<h3 class='text-color'>
+Weather in your city
+</h3>
+<ul>
+<li><a href="http://openweathermap.org/find?q=">Find your city</a></li>
+<li><a href="http://openweathermap.org/weathermap">Weather maps</a></li>
+</ul>
+<h3 class='text-color'>
+Weather APIs
+</h3>
+<div class='content'>
+<ul>
+<li><a href="http://openweathermap.org/appid">How to start</a></li>
+<li><a href="http://openweathermap.org/API">Weather APIs for developers</a></li>
+<li><a href="http://openweathermap.org/current">Current weather</a></li>
+<li><a href="http://openweathermap.org/forecast5">5 day / 3 hour weather forecast</a></li>
+<li><a href="http://openweathermap.org/forecast16">16 day / daily weather forecast</a></li>
+<li><a href="http://openweathermap.org/history">Hourly historical data</a></li>
+<li><a href="http://openweathermap.org/api_station">Data from weather stations</a></li>
+<li><a href="http://openweathermap.org/examples">Examples of API use</a></li>
+</ul>
+</div>
+</div>
+<!-- Map layers -->
+<div class='col-sm-4'>
+<h3 class='text-color'>
+Map layers
+</h3>
+<div class='content'>
+<ul>
+<li><a href="http://openweathermap.org/hugemaps">Examples of weather map layers</a></li>
+<li><a href="http://openweathermap.org/map_array">Embed weather maps with array of data</a></li>
+<li><a href="http://openweathermap.org/tile_map">Embed weather maps with tile server</a></li>
+</ul>
+<h3 class='text-color'>
+How to subscribe
+</h3>
+<ul>
+<li><a href="http://openweathermap.org/price">Price-list</a></li>
+<li><a href="http://openweathermap.org/price_subscribe">Subscribe to APIs</a></li>
+</ul>
+<div class='alert alert-info'>
+Found a bug? Have a question or idea? Welcome to
+<a target="_blank" class="alert-link" href="https://openweathermap.desk.com/customer/portal/emails/new">Support center
+</a></div>
+<div class='clearfix'></div>
+</div>
+</div>
+<!-- Column 3 -->
+<div class='col-sm-4'>
+<h3 class='text-color'>
+Weather station network
+</h3>
+<ul>
+<li><a href="http://openweathermap.org/stations">How to connect your weather station</a></li>
+<li><a href="http://openweathermap.org/stations#DIY">DIY weather station projects</a></li>
+</ul>
+<h3 class='text-color'>
+About
+</h3>
+<ul>
+<li><a href="http://openweathermap.org/technology">OpenWeatherMap technology</a></li>
+<li><a href="http://owm.io/">VANE Spacial Data Science Platform</a></li>
+</ul>
+<h3 class='text-color'>
+Go Social
+</h3>
+<div class='content social'>
+<p>
+Follow OpenWeatherMap on
+<a href='https://twitter.com/OpenWeatherMap'>Twitter,</a>
+<a href='https://www.facebook.com/groups/270748973021342'>Facebook,</a>
+<a href='https://www.facebook.com/groups/270748973021342'>Google+</a>
+and
+<a href='https://www.facebook.com/groups/270748973021342'>Github.</a>
+</p>
+<div class='clearfix'></div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<hr>
+</div>
+</div>
+<!-- Copyrights -->
+<div class='row'>
+<div class='col-sm-12'>
+<p>
+© 2012-2016 OpenWeatherMap, Inc.
+<a href="http://owm.io/about">About company</a>
+|
+<a href="http://openweathermap.org/privacy-policy">Privacy Policy</a>
+|
+<a href="http://openweathermap.org/terms">Terms of Service</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M2MCL9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M2MCL9');</script>
+<!-- End Google Tag Manager -->
+
+<script src="/assets/application-8572818a0158fcc433fe0ef74ecdd97f6090ebda1ec4772660ae1bcf8b540074.js"></script>
+
+<div class='modal fade' id='poll_modal'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<form class="button_to" method="post" action="/cancel_poll"><button class="close" type="submit"><span>x</span>
+</button><input type="hidden" name="authenticity_token" value="pxNDNCGBs1xmjHOHbl1prY0Cvrhsu3Ty2f/CXZHBOh/7b7zu736+7VX0dDCmQ5KYYxhxJCmKWgcZwiKzpbBYFw==" /></form><h4 class='modal-title'>
+How and where will you use our API?
+</h4>
+</div>
+<div class='modal-body'>
+<p>Hi! We are doing some housekeeping around thousands of our customers.  Your impact will be much appreciated. All you need to do is to choose in which exact area you use our services.</p>
+<form class="simple_form form-horizontal" id="poll-form" novalidate="novalidate" action="/create_poll" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="T1yh6ybzpUmOcDu4lAXv2etQXEsS7bgRacvojp7AeUMTIF4x6Ayo+L0IPA9cGxTsBUqT11fcluSp9ghgqrEbSw==" /><div class="form-group string optional poll_company"><label class="string optional col-sm-3 control-label" for="poll_company">Company</label><div class="col-sm-9"><input class="string optional form-control" type="text" name="poll[company]" id="poll_company" /></div></div>
+<div class="form-group select required poll_purpose"><label class="select required col-sm-3 control-label" for="poll_purpose"><abbr title="required">*</abbr> Purpose</label><div class="col-sm-9"><select class="select required form-control" name="poll[purpose]" id="poll_purpose"><option value="">Choose answer</option>
+<option value="Advertising">Advertising</option>
+<option value="Agriculture">Agriculture</option>
+<option value="Car applications">Car applications</option>
+<option value="Consulting">Consulting</option>
+<option value="Travel">Travel</option>
+<option value="Education/Science">Education/Science</option>
+<option value="Energy and Utilities">Energy and Utilities</option>
+<option value="Insurance">Insurance</option>
+<option value="Logistics">Logistics</option>
+<option value="Manufacturing">Manufacturing</option>
+<option value="Mobile apps development">Mobile apps development</option>
+<option value="Retail">Retail</option>
+<option value="Wearables">Wearables</option>
+<option value="Weather widget for web">Weather widget for web</option>
+<option value="Other">Other</option></select><p class="help-block">Can&#39;t be empty</p></div></div>
+<div class="form-group text optional poll_purpose_text"><label class="text optional col-sm-3 control-label" for="poll_purpose_text">Your answer</label><div class="col-sm-9"><textarea class="text optional form-control" name="poll[purpose_text]" id="poll_purpose_text">
+</textarea><p class="help-block">Can&#39;t be empty</p></div></div>
+</form>
+</div>
+<div class='modal-footer'>
+<form class="button_to" method="post" action="/cancel_poll"><input class="btn btn-default" type="submit" value="Cancel" /><input type="hidden" name="authenticity_token" value="wtM+cky5cVk9b3ylvXdO85Pp1LygTX6zbn8QQKmfHyyer8GogkZ86A4XexJ1abXGffMbIOV8UEauQvCune59JA==" /></form>
+<button name="button" type="submit" onclick="$(&quot;#poll-form&quot;).submit()" class="btn btn-orange">Save</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready( function() {
+       $('#poll_modal').modal('show');
+    } );
+</script>
+
+</body>
+<div class='loader-layout' style='display: none;'>
+<div class='redirect'>
+<img src="/assets/owm-b168522712c309b0319074cbd035ceb35a90d47dd9f01e622f2c76e7703181f3.gif" alt="Owm" />
+<p>
+<b class='msg'>Please wait...</b>
+</p>
+</div>
+</div>
+
+</html>
