@@ -9,25 +9,29 @@
 
 https://docs.google.com/spreadsheets/d/1COO6t40avsXZLTW8LWMaYfaFrLWVavjIDL_QbHrwFts/edit#gid=0
 '''
-
-
-
 from skpy import *
-sk=Skype("ostrowsky_", "geu9Kali5")
+
 contacts = []
-chats = {}
+sk = Skype("anna.freelanser", "HfrbYfYt,t919")
 source_contacts = sk.contacts
 for contact in source_contacts:
-    contacts.append("8:"+ str(contact.id))
+    contacts.append(str(contact.id))
 print(contacts)
-chats = sk.chats.recent()
-for chat in chats:
-    print(chat, '\n')
+for contact in contacts:
+    try:
+        chat = sk.contacts[contact].chat
+        if chat.getMsgs():
+            print(chat.getMsgs())
+    except Exception as exc:
+        resp = exc.args
+        print(resp)
 '''
 for contact in contacts:
     chat = sk.chats.chat(contact).getMsgs()
     if chat:
         print(chat[0], '\n')
+
+
 
 recent_messages = sk.chats.chat(contact).getMsgs()
     if recent_messages:
