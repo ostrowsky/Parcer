@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skype Parser</title>
+</head>
+<body>
+    <H1>Список чатов</H1>
+    <table border="1" cellpadding="5" style="border-collapse: collapse; border: 1px solid black;">
+        <thead>
+            <td style="text-align: center; width: 200px;"><b>Автор</b></td>
+            <td style="text-align: center; width: 100px;"><b>Сколько прошло с его сообщения?</b></td>
+            <td style="text-align: center; width: 250px;"><b>Комментарий</b></td>
+            <td style="text-align: center; width: 600px;"><b>Ввод комментария</b></td>
+            <td style="text-align: center; width: 80px;"><b>Архивация</b></td>
+        </thead>
+        <tbody>
+         {% for row in context %}
+        <tr>
+            <td style="width: 200px;">{{row.author}}</td>
+            <td style="width: 100px;">{{row.datetime}}</td>
+            <td style="width: 250px;">{{row.comment}}</td>
+            <td style="width: 600px;">
+                <form method="post" role="form" action="/addcomment/">
+                 {% csrf_token %}
+                    <input type="hidden" name = "id" value={{row.id}}>
+                    <input style="width: 100px;" placeholder="Имя" name = "comment_author">
+                    <input style="width: 450px;" placeholder="Комментарий" name = "comment">
+                    <input style="width: 30px;" type="submit" value="OK">
+                </form>
+            </td>
+            <td style="width: 80px;">
+                <form method="post" role="form" action="/archivate/">
+                 {% csrf_token %}
+                    <input type="hidden" name = "id" value={{row.id}}>
+                    <input type="submit" value="В архив">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
