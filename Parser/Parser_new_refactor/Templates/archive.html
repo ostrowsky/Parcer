@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skype Parser</title>
+</head>
+<body>
+    <a href="/"><h1>На главную</h1></a>
+    <table border="1" cellpadding="5" style="border-collapse: collapse; border: 1px solid black;">
+        <thead>
+            <td style="text-align: center; width: 20px;"><b>Аватар</b></td>
+            <td style="text-align: center; width: 20px;"><b>Логин</b></td>
+            <td style="text-align: center; width: 20px;"><b>Имя</b></td>
+            <td style="text-align: center; width: 100px;"><b>Сколько прошло с его сообщения?</b></td>
+            <td style="text-align: center; width: 500px;"><b>Комментарий</b></td>
+            <td style="text-align: center; width: 200px;"><b>Деархивация</b></td>
+        </thead>
+        <tbody>
+         {% for row in context %}
+        <tr style="background-color:{{row.color}};">
+            <td style="width: 20px;"><img src="{{row.avatar}}" width="50px"></td>
+            <td style="width: 20px;">{{row.login}}</td>
+            <td style="width: 20px;">{{row.author}}</td>
+            <td style="width: 100px;">{{row.datetime}}</td>
+            <td style="width: 600px;">{% for row in row.comment %}
+                                        {{row}}<br>&nbsp;&nbsp;
+                                      {% endfor %}
+            </td>
+            <td style="width: 200px;">
+                <form method="post" role="form" action="/dearchivate/">
+                 {% csrf_token %}
+                    <input type="hidden" name = "id" value={{row.id}}>
+                    <input type="submit" value="Восстановить">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

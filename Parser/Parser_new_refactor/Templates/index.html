@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skype Parser</title>
+</head>
+<body>
+    {% block header %}
+    <h1>Список чатов</h1>
+    {% endblock %}
+    <a href="/archive"><h2 style="display: inline;">Архив</h2></a> &nbsp; &nbsp;
+    <a href="/users/Ангел" style="display: inline;" ><b style="display: inline;">Ангел</b></a>
+    <a href="/users/Лада" style="display: inline;"><b style="display: inline;">Лада</b></a>
+    <a href="/users/Максим" style="display: inline;"><b style="display: inline;">Максим</b></a>
+    <a href="/users/Егор" style="display: inline;"><b style="display: inline;">Егор</b></a>
+    <hr>
+    <table border="1" cellpadding="5" style="border-collapse: collapse; border: 1px solid black;">
+        <thead>
+            <td style="text-align: center; width: 20px;"><b>Аватар</b></td>
+            <td style="text-align: center; width: 20px;"><b>Логин</b></td>
+            <td style="text-align: center; width: 20px;"><b>Автор последнего сообщения</b></td>
+            <td style="text-align: center; width: 100px;"><b>Прошедшее время</b></td>
+            <td style="text-align: center; width: 600px;"><b>Комментарий</b></td>
+            <td style="text-align: center; width: 250px;"><b>Ввод комментария</b></td>
+            <td style="text-align: center; width: 80px;"><b>Архивация</b></td>
+        </thead>
+        <tbody>
+         {% for row in context %}
+        <tr style="background-color:{{row.color}};">
+            <td style="width: 20px;"><img src="{{row.avatar}}" width="50px"></td>
+            <td style="width: 20px;">{{row.login}}</td>
+            <td style="width: 20px;">{{row.author}}</td>
+            <td style="width: 100px;">{{row.datetime}}</td>
+            <td style="width: 600px;" >{% for item in row.comment %}
+                {{item}} <br>&nbsp; &nbsp;
+                {% endfor %}
+            <div id=comment_{{row.login}}></div>
+            </td>
+            <td style="width: 250px;">
+                <form id={{row.id}} method="post" action="/addcomment/">
+                 {% csrf_token %}
+                    <input type="hidden" id="id" name= "id" value={{row.login}}>
+                    <input style="width: 100px;" placeholder="Имя" name = "comment_author">
+                    <input style="width: 240px;" placeholder="Комментарий" name = "comment">
+                    <input type="submit" value="OK">
+                </form>
+            </td>
+            <td style="width: 80px;">
+                <form method="post" role="form" action="/archivate/">
+                 {% csrf_token %}
+                    <input type="hidden" name = "id" value={{row.login}}>
+                    <input type="submit" value="В архив">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
